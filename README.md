@@ -1,7 +1,8 @@
 # thermia-genesis-calibra
 
-Information meant integration of Thermia in Home Asssistant;
-modbus BMS must be enabled on your Thermia system (I use modbus TCP).
+Information meant integration of Thermia heatpumps (genesis platform) in Home Asssistant;
+Modbus BMS must be enabled on your Thermia system (I use modbus TCP).
+
 DISCLAIMER: use at your own risk, don't complain if it eats your dog or burns your house ....
 
 For the Calibra, I managed to use the https://github.com/CJNE/thermiagenesis Home Assistant integration, which works fine for most parameters.

@@ -14,7 +14,7 @@ These missing registers can be enabled by adding a modbus section to your config
 modbus:
  - name: "Thermia Calibra"
    type: tcp
-   host: "10.10.10.25"
+   host: "x.y.z.a" # your thermia IP address
    port: 502
    switches:
     - name: "BMS controlled temperature"

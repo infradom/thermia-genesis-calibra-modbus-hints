@@ -147,7 +147,7 @@ template:
         event_type: event_template_reloaded
     action:
       - variables:
-          w: weather.huis # you may have named it differently
+          w: weather.forecast_home # you may have named it differently
       - service: weather.get_forecasts
         data:
           type: hourly

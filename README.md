@@ -9,6 +9,7 @@ For the Calibra, I managed to use the https://github.com/CJNE/thermiagenesis Hom
 Unfortunately, this integration currently misses some interesting registers:
  - BMS supplied outside temperature
  - Energy performance parameters (COP today for heat and tapwater)
+ - Condenser pump continuous operation
 
 As I currently have no time to contribute to the mentioned integration, I added these modbus entities manually.
 These missing registers can be enabled by adding a modbus section to your config/configuration.yaml file:

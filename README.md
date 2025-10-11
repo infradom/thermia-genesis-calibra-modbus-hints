@@ -32,6 +32,17 @@ modbus:
         address: 117
         state_on: 1
         state_off: 0
+    - name: "Condenser Pump Continuous Operation"
+      address: 59
+      unique_id: "condenser_pump_continuous_operation"
+      write_type: coil
+      command_on: 1
+      command_off: 0
+      verify:
+        input_type: coil
+        address: 59
+        state_on: 1
+        state_off: 0
    climates:
     - name: "BMS outdoor temperature"
       address: 13

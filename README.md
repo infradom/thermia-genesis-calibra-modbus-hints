@@ -62,6 +62,16 @@ modbus:
       target_temp_write_registers: false
       temp_step: 0.1
       temperature_unit: C
+    - name: Thermia comfort wheel
+      address: 121
+      input_type: input
+      max_temp: 25
+      min_temp: 10
+      precision: 2
+      scale: 0.01
+      temp_step: 0.1
+      target_temp_register: 5
+      temperature_unit: C
    sensors:
     - name: Heat energy consumed today
       address: 331
@@ -131,7 +141,15 @@ modbus:
       scan_interval: 120
       slave: 1
       unique_id: Thermia_tapwater_energy_delivered_today
-
+    - name: Thermia Comfort wheel setting
+      address: 5
+      input_type: holding
+      scan_interval: 120
+      slave: 1
+      unique_id: thermia_comfort_wheel_setting
+      scale: 0.01
+      precision: 1
+      unit_of_measurement: C
 ```
 
 As some of these registers are not (yet) documented, I have to issue a severe disclaimer: use at your own risk, don't complain if it eats your dog or burns your house !!

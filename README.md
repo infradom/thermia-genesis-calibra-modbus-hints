@@ -161,7 +161,7 @@ modbus:
 As some of these registers are not (yet) documented, I have to issue a severe disclaimer: use at your own risk, don't complain if it eats your dog or burns your house !!
 
 
-This has been tested on both Calibra Cool 7 and Calibra Cool Eco 8 systems running software version 16.
+This has been tested on both Calibra Cool 7 and Calibra Cool Eco 8 systems running software version 16 and 17.
 
 Installation: Add the content of this section to your config/configuration.yaml file, edit to provide the correct IP address and restart your system
 Add the new entities to your preferred dashboard.

@@ -10,6 +10,7 @@ Unfortunately, this integration currently misses some interesting registers:
  - BMS supplied outside temperature
  - Energy performance parameters (COP today for heat and tapwater)
  - Condenser pump continuous operation
+ - Comfort wheel with finer 0.1 °C granularity (limited and with faulty scaling for room sensor)
  - ...
 
 As I currently have no time to contribute to the mentioned integration, I added these modbus entities manually.

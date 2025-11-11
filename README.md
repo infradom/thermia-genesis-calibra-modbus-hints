@@ -20,7 +20,7 @@ These missing registers can be enabled by adding a modbus section to your config
 modbus:
  - name: "Thermia Calibra"
    type: tcp
-   host: "x.y.z.a" # your thermia IP address
+   host: "10.10.10.25"
    port: 502
    switches:
     - name: "BMS controlled temperature"
@@ -91,8 +91,7 @@ modbus:
       unique_id: Thermia_heat_energy_delivered_today
     - name: Heat COP today
       address: 333
-      device_class: power_factor
-      unit_of_measurement: ''
+      unit_of_measurement: state
       scale: 0.1
       precision: 1
       input_type: input
@@ -125,8 +124,7 @@ modbus:
       unique_id: Thermia_tapwater_energy_delivered_today
     - name: Tapwater COP today
       address: 338
-      device_class: power_factor
-      unit_of_measurement: ''
+      unit_of_measurement: state
       scale: 0.1
       precision: 1
       input_type: input
@@ -141,6 +139,12 @@ modbus:
       scan_interval: 120
       slave: 1
       unique_id: Thermia_tapwater_energy_delivered_today
+    - name: Mix valve 1 position
+      address: 298
+      input_type: holding
+      scan_interval: 120
+      slave: 1
+      unique_id: Mix_valve_1_position
     - name: Thermia Comfort wheel setting
       address: 5
       input_type: holding
@@ -149,7 +153,8 @@ modbus:
       unique_id: thermia_comfort_wheel_setting
       scale: 0.01
       precision: 1
-      unit_of_measurement: C
+      unit_of_measurement: '°C'
+
 ```
 
 As some of these registers are not (yet) documented, I have to issue a severe disclaimer: use at your own risk, don't complain if it eats your dog or burns your house !!
@@ -191,7 +196,6 @@ template:
         unit_of_measurement: "°C"
         device_class: temperature
         state: "{{ hourly[w].forecast[3].temperature }}"
-
 
 ```
 An automation is used to propagate changes in this forecast to the Thermia outside temperature:

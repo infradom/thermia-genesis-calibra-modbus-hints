@@ -116,7 +116,7 @@ modbus:
       input_type: input
       scan_interval: 120
       slave: 1
-      unique_id: Thermia_heat_COP_today
+      unique_id: Thermia_heat_COP_year
     - name: Tapwater energy consumed today
       address: 336
       device_class: energy

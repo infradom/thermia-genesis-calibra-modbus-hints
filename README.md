@@ -107,7 +107,7 @@ modbus:
       scan_interval: 120
       slave: 1
       unique_id: Thermia_heat_energy_delivered_today
-# following entries are guesses - not confirmed
+# following entries are guesses - not confirmed and probably wrong 
     - name: Heat COP year
       address: 354
       unit_of_measurement: state

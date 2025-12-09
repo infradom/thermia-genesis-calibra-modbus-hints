@@ -107,6 +107,16 @@ modbus:
       scan_interval: 120
       slave: 1
       unique_id: Thermia_heat_energy_delivered_today
+# following entries are guesses - not confirmed
+    - name: Heat COP year
+      address: 354
+      unit_of_measurement: state
+      scale: 0.1
+      precision: 1
+      input_type: input
+      scan_interval: 120
+      slave: 1
+      unique_id: Thermia_heat_COP_today
     - name: Tapwater energy consumed today
       address: 336
       device_class: energy
@@ -146,6 +156,7 @@ modbus:
       scan_interval: 120
       slave: 1
       unique_id: Mix_valve_1_position
+`# end of guesses
     - name: Thermia Comfort wheel setting
       address: 5
       input_type: holding
